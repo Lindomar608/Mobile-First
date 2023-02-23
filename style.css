@@ -1,0 +1,114 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --ff-texting: 'palanquin', sans-serif;
+  --ff-name: 'staatliches', sans-serif;
+
+  font-size: 62.5%;
+  --fs-body: 1.3rem;
+  --fs-card: 2.0rem;
+
+  --hue: 218;
+  --bg-body: #E5E5E5;
+  --bg-page: hsla(var(--hue), 100%, 97%);
+  --bg-heading: hsla(var(--hue), 17%, 62%);
+  --fc-heading: hsla(var(--hue), 84%, 12%);
+  --fc-card: hsla(var(--hue), 17%, 35%);
+}
+
+body {
+  font-size: var(--fs-body);
+  background-color: var(--bg-body);
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-heading);
+  height: 27.9rem;
+  align-items: center;
+}
+
+.logo {
+  width: 13.7rem;
+  margin-top: 32px;
+}
+
+.cream {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), #CBC0D3;
+  padding: 8px 89px;
+  margin: 40px 0 36px;
+}
+
+.page {
+  max-width: 38.4rem;
+  background-color: var(--bg-page);
+  margin: 0 auto;
+}
+
+p {
+  font-family: var(--ff-texting);
+  color: var(--fc-heading);
+  line-height: 25px;
+  font-weight: 400;
+  font-size: var(--fs-body);
+  
+  text-align: center;
+  padding: 0 40px;
+  margin: 12px 0 65px;
+}
+
+.card {
+  margin: 0 auto;
+  padding: 0 32px;
+  position: relative;
+  margin-bottom: 3.2rem;
+}
+
+.card img {
+  width: 100%;
+  transition: all 200ms;
+  cursor: pointer;
+  animation: topdown 900ms;
+}
+
+.card h1 {
+  font-family: var(--ff-name);
+  color: var(--fc-card);
+  letter-spacing: 0.05rem;
+  font-weight: 400;
+  font-size: var(--fs-card);
+  line-height: 3.4rem;
+
+  position: absolute;
+  top: 1.7rem;
+  right: 4.9rem;
+
+  padding: 0.5rem 3.2rem;
+  background-color: #FEEAFA;
+  border-radius: 3.9rem;
+
+  animation: topdown reverse 500ms;
+  animation-delay: 200ms;
+  animation-fill-mode: forwards;
+}
+
+.card img:hover {
+  transform: scale(1.1);
+}
+
+@keyframes topdown {
+  0% {
+    opacity: 1;
+    transform: translateY(13px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
